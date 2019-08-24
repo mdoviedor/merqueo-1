@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'pedidos.apps.PedidosConfig',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -72,11 +74,16 @@ WSGI_APPLICATION = 'merqueo.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
-
+# admin
+# lDh5QpMsaUC9aOlSgcCt
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'merqueo',
+        'USER': 'admin',
+        'PASSWORD': 'lDh5QpMsaUC9aOlSgcCt',
+        'HOST': 'merqueo.c1naivehmhjb.us-east-2.rds.amazonaws.com',
+        'PORT': '3306',
     }
 }
 
