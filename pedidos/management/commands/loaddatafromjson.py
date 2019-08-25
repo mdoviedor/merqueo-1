@@ -5,7 +5,7 @@ import datetime
 
 
 class Command(BaseCommand):
-    help("Load the data of json files.")
+    help("Load the data of the json files.")
 
     def handle(self, *args, **options):
         self.stdout.write("loading inventory")

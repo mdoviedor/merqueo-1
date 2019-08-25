@@ -21,6 +21,7 @@ from pedidos import views
 router = routers.DefaultRouter()
 router.register(r'users', views.UserViewSet)
 router.register(r'orders', views.OrderViewSet)
+router.register(r'products', views.ProductViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
