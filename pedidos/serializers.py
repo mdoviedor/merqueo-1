@@ -30,6 +30,12 @@ class OrderSerializer(serializers.ModelSerializer):
         fields = ['id', 'priority', 'user', 'delivery_date', 'products']
 
 
+class InventorySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Inventory
+        fields = ['product', 'quantity', 'date']
+
+
 class SalesTotalSerializer(serializers.BaseSerializer, ABC):
     def to_representation(self, obj):
         return {
@@ -37,3 +43,9 @@ class SalesTotalSerializer(serializers.BaseSerializer, ABC):
             'name': obj.name,
             'total_quantity': obj.total_quantity if obj.total_quantity else 0
         }
+
+
+class ProviderSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Provider
+        fields = '__all__'
