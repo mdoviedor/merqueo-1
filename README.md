@@ -2,58 +2,48 @@
 
 
 ## install
-- Instalar python3
-- Instalar pip3
-- clonar el proyecto
+- Instalar python3 y pip
+- clonar el proyecto y ubicarse en la carpeta
 
-  ``
+  ```console
     git clone ...
-  ``
-- Ubicarse en la carpeta del proyecto
+    cd merqueo
+  ```
+- Install virtualenv y crear entorno virtual
 
-    ``
-      cd merqueo
-    ``
-- Install virtualenv
-
-    ``
-      pip3 install virtualenv
-    ``
-
-- Crear virtualenv
-
-     ``
-      virtualenv venv
-     ``
+   ```console
+    python3 -m pip install virtualenv
+    virtualenv venv
+   ```
  - Activar virtualenv
  
-     ``
+     ```console
       source venv/bin/activate
-     ``
+     ```
  - Instalar requerimientos
  
-     ``
+     ```console
       pip install -r requirements.txt
-     ``
+     ```
  - Iniciar el servicio
- 
-     ``
+   
+     ```console
       python manage.py runserver 127.0.0.1:8000
-     ``
+     ```
 
 # Cargar datos
-- Ejecutar el comando
-
-    ``
-      python manage.py loaddatafromjson
-    ``
+Para cargar los datos de los json a la base de datos ejecute el sigiente comando.
+```console
+    python manage.py loaddatafromjson
+```
 
 # Testing
-- Ejecutar el comando
+Para ejecutar las pruebas de los servicios ejecute.
 
-    ``
-      python manage.py test
-    ``
+```console
+  python manage.py test
+```
+
 # Documentacion
 
 Documentación y test del API [link](http://ec2-18-224-229-157.us-east-2.compute.amazonaws.com:8000/)
