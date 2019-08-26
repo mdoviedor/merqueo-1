@@ -33,6 +33,17 @@
   python manage.py runserver 127.0.0.1:8000
  ``
 
+# Cargar datos
+- Ejecutar el comando
+``
+  python manage.py loaddatafromjson
+``
+
+# Testing
+- Ejecutar el comando
+``
+  python manage.py test
+``
 # Documentacion
 
 
