@@ -31,7 +31,22 @@
       python manage.py runserver 127.0.0.1:8000
      ```
 
-# Cargar datos
+### Configuracion de base datos(Opcional)
+Puede cambiar la configuracion de la base de datos en.
+```python
+# merqueo/merqueo/settings.py
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'merqueo',
+        'USER': 'admin',
+        'PASSWORD': '***',
+        'HOST': 'merqueo.c1naivehmhjb.us-east-2.rds.amazonaws.com',
+        'PORT': '3306',
+    }
+}
+```
+### Cargar datos
 Para cargar los datos de los json a la base de datos ejecute el sigiente comando.
 ```console
     python manage.py loaddatafromjson
@@ -60,7 +75,7 @@ El API cuenta con los servicios CRUD de las entidades Products, Providers, Users
 
 ## Breve descripcion de la implementacion
 El API fue desarrollada con python, usando Django rest framework, Se hizo uso de MySQL como motor de base de datos.
-Fue desplegada en Amazon Web Serives, haciendo uso de E2C, la base en el servicio RDC de AWS.
+Fue desplegada en Amazon Web Serives, haciendo uso de EC2, la base en el servicio RDS de AWS.
  
 ## Modelo de capas
 ![alt Modelo de capas](https://firebasestorage.googleapis.com/v0/b/spartan-concord-243720.appspot.com/o/layerModel.png?alt=media&token=a29d453f-87db-4334-aeee-fffa6c2fb1f8)
@@ -69,8 +84,11 @@ Fue desplegada en Amazon Web Serives, haciendo uso de E2C, la base en el servici
 ### Views(ViewSet)
 Se encarga de recibir la peticion, ejecutar la logica requerida y serializar los datos para poder dar respuesta.
 
-> **Serializer:**
+**Serializer:**
 Se encarga de validar y trasformar los modelos o queryset en listas o dicionarios para poder ser retorn en formato JSON.
 
->**Logica de negocio:**
+**Logica de negocio:**
 Encargada de ejecutar la logica solicitada  en la aplicacion
+
+#Base de datos
+![alt modelo entidad ralacion](imagen.jpg)

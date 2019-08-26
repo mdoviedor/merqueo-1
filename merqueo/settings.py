@@ -25,7 +25,7 @@ SECRET_KEY = '=6cj&($-*)!he%b&c9xvlnbgg(65f0l(%gvuh8!i$$gx)(bh5g'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['ec2-18-224-229-157.us-east-2.compute.amazonaws.com']
+ALLOWED_HOSTS = ['ec2-18-224-229-157.us-east-2.compute.amazonaws.com', '*']
 
 
 # Application definition
@@ -74,8 +74,6 @@ WSGI_APPLICATION = 'merqueo.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
-# admin
-# lDh5QpMsaUC9aOlSgcCt
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
