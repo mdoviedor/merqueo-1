@@ -1,5 +1,6 @@
 # Merqueo Test
 
+[http://ec2-18-224-229-157.us-east-2.compute.amazonaws.com:8000/](http://ec2-18-224-229-157.us-east-2.compute.amazonaws.com:8000/)
 
 ## install
 - Instalar python3 y pip
@@ -46,7 +47,15 @@ DATABASES = {
     }
 }
 ```
-### Cargar datos
+- Crear el esquema de base datos
+```sql
+CREATE DATABASE merqueo;
+```
+- Correr migraciones
+```bash
+    python manage.py migrate
+```
+## Cargar datos
 Para cargar los datos de los json a la base de datos ejecute el sigiente comando.
 ```console
     python manage.py loaddatafromjson
