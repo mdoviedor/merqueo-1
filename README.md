@@ -100,4 +100,4 @@ Se encarga de validar y trasformar los modelos o queryset en listas o dicionario
 Encargada de ejecutar la logica solicitada  en la aplicacion
 
 #Base de datos
-![alt modelo entidad ralacion](imagen.jpg)
+![alt modelo entidad ralacion](https://firebasestorage.googleapis.com/v0/b/spartan-concord-243720.appspot.com/o/merqueo_diagram.png?alt=media&token=58ddcfb9-fe7e-46de-8e2c-e0bb3d66a071)
